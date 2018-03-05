@@ -3,8 +3,8 @@ import time
  
 
 GPIO.setmode(GPIO.BCM)
-GPIO_TRIGGER = 17
-GPIO_ECHO = 27
+GPIO_TRIGGER = 23
+GPIO_ECHO = 24
 GPIO_BUZZER= 4
 
 
