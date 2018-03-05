@@ -60,34 +60,34 @@ if __name__ == '__main__':
             if dist > 100:
                 pulssimodulaatio(0,2)
 
-            elif dist in range(100,90,-1)
+            elif dist in range(100,90,-1):
                 pulssimodulaatio(50,2)
             
-            elif dist in range(90,80,-1)
+            elif dist in range(90,80,-1):
                 pulssimodulaatio(50,3)
 
-            elif dist in range(80,70,-1)
+            elif dist in range(80,70,-1):
                 pulssimodulaatio(50,4)
             
-            elif dist in range(70,60,-1)
+            elif dist in range(70,60,-1):
                 pulssimodulaatio(50,5)
             
-            elif dist in range (60,50,-1)
+            elif dist in range (60,50,-1):
                 pulssimodulaatio(50,6)
             
-            elif dist in range(50,40,-1)
+            elif dist in range(50,40,-1):
                 pulssimodulaatio(50,7)
 
-            elif dist in range(40,30,-1)
+            elif dist in range(40,30,-1):
                 pulssimodulaatio(50,8)
             
-            elif dist in range(30,20,-1)
+            elif dist in range(30,20,-1):
                 pulssimodulaatio(50,9)
             
-            elif dist in range(20,10,-1)
+            elif dist in range(20,10,-1):
                 pulssimodulaatio(50,10)
             
-            elif dist in range (10,0,-1)
+            elif dist in range (10,0,-1):
                 pulssimodulaatio(0,10)
 
             
