@@ -18,6 +18,12 @@ GPIO.setup(GPIO_BUZZER, GPIO.OUT)
 p = GPIO.PWM(GPIO_BUZZER,2) 
 p.start(50)
 
+#def pulssimodulaatio():
+    #p.ChangeDutyCycle(dc)
+    #p.ChangeFrequency(freq)
+
+
+
 def distance():
     # set Trigger to HIGH
     GPIO.output(GPIO_TRIGGER, True)
@@ -39,7 +45,7 @@ def distance():
  
     # time difference between start and arrival
     TimeDuration = StopTime - StartTime
-    distance = (TimeDuration * 343) / 2
+    distance = (TimeDuration * 34300) / 2
  
     return distance
  
