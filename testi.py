@@ -14,10 +14,11 @@ GPIO.setup(GPIO_TRIGGER, GPIO.OUT)
 GPIO.setup(GPIO_ECHO, GPIO.IN)
 GPIO.setup(GPIO_BUZZER, GPIO.OUT)
 
-#PWM for buzzer
+#initialise PWM for buzzer
 p = GPIO.PWM(GPIO_BUZZER,2) 
 p.start(50)
 
+#function to change pwm 
 def pulssimodulaatio(dc,freq):
     p.ChangeDutyCycle(dc)
     p.ChangeFrequency(freq)
@@ -56,7 +57,8 @@ if __name__ == '__main__':
             print (dist)
             dist = round(dist,0)
             time.sleep(1)
-            
+
+            #if-else to set correct PWM  
             if dist > 100:
                 pulssimodulaatio(0,2)
 
