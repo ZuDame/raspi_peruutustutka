@@ -56,7 +56,7 @@ if __name__ == '__main__':
             dist = distance()
             print (dist)
             dist = round(dist,0)
-            time.sleep(1)
+            
 
             #if-else to set correct PWM  
             if dist > 100:
@@ -92,6 +92,7 @@ if __name__ == '__main__':
             elif dist in range (10,0,-1):
                 pulssimodulaatio(0,10)
 
+            time.sleep(1)
             
         
     except KeyboardInterrupt:
