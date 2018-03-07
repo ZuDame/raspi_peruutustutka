@@ -88,7 +88,7 @@ if __name__ == '__main__':
                 pulssimodulaatio(50,10)
             
             elif dist in range (10,0,-1):
-                pulssimodulaatio(0,10)
+                pulssimodulaatio(100,10)
 
             time.sleep(1)
             
