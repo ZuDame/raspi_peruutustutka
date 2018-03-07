@@ -1,3 +1,4 @@
+#imports
 import RPi.GPIO as GPIO
 import time
  
@@ -16,7 +17,7 @@ GPIO.setup(GPIO_BUZZER, GPIO.OUT)
 p = GPIO.PWM(GPIO_BUZZER,2) 
 p.start(50)
 
-#function to change pwm 
+#function to change pwm (dc = dutyCyce, freq = frequency)
 def pulssimodulaatio(dc,freq):
     p.ChangeDutyCycle(dc)
     p.ChangeFrequency(freq)
@@ -53,6 +54,7 @@ if __name__ == '__main__':
         while True:
             dist = distance()
             print (dist)
+            #round dist
             dist = round(dist,0)
             
 
@@ -94,5 +96,5 @@ if __name__ == '__main__':
             
         
     except KeyboardInterrupt:
-        print("Measurement stopped by User")
+        print("Exit by user")
         GPIO.cleanup()
