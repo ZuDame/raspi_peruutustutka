@@ -1,16 +1,14 @@
 import RPi.GPIO as GPIO
 import time
  
-
+#set GPIO_pin numbers
 GPIO.setmode(GPIO.BCM)
-GPIO_TRIGGER = 23
+GPIO_TRIG = 23
 GPIO_ECHO = 24
 GPIO_BUZZER= 4
 
-
- 
-#set GPIO direction (IN / OUT)
-GPIO.setup(GPIO_TRIGGER, GPIO.OUT)
+#set GPIO input/output
+GPIO.setup(GPIO_TRIG, GPIO.OUT)
 GPIO.setup(GPIO_ECHO, GPIO.IN)
 GPIO.setup(GPIO_BUZZER, GPIO.OUT)
 
@@ -24,14 +22,14 @@ def pulssimodulaatio(dc,freq):
     p.ChangeFrequency(freq)
 
 
-
+#function to measure distance
 def distance():
     # set Trigger to HIGH
-    GPIO.output(GPIO_TRIGGER, True)
+    GPIO.output(GPIO_TRIG, True)
  
     # set Trigger after 0.01ms to LOW
     time.sleep(0.00001)
-    GPIO.output(GPIO_TRIGGER, False)
+    GPIO.output(GPIO_TRIG, False)
  
     StartTime = time.time()
     StopTime = time.time()
@@ -58,7 +56,7 @@ if __name__ == '__main__':
             dist = round(dist,0)
             
 
-            #if-else to set correct PWM  
+            #if-else to set correct PWM with pulssimodulaatio()  
             if dist > 100:
                 pulssimodulaatio(0,2)
 
